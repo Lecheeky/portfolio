@@ -3,10 +3,19 @@
     src: url(fonts/RobotoSlab-VariableFont_wght.ttf);
 }
 
+@font-face {
+    font-family: helvetica;
+    src: url(fonts/Helvetica-Bold.ttf);
+}
+
 body{
     margin: 0;
     padding: 0;
     font-family: roboto;
+}
+
+*{
+    scroll-behavior: smooth;
 }
 
 ul, li{
@@ -23,7 +32,7 @@ a{
 
 .nav-links-container ul{
     position: relative;
-    top: 30px;
+    top: 35px;
     margin-right: 80px;
     display: flex;
     justify-content: end;
@@ -41,7 +50,7 @@ a{
 }
 
 .nav-links-container ul a:hover{
-    color: rgb(155, 221, 243);
+    color: rgb(253, 200, 246);
 }
 
 .logo{
@@ -70,6 +79,9 @@ a{
 
 .home-image-container{
     width: 50%;
+    margin-left: 460px;
+    margin-top: 160px;
+    animation: homeImage 1.3s; 
 }
 
 .home-image{
@@ -78,16 +90,14 @@ a{
     height: 450px;
     object-position: 100% 79%;
     border-radius: 50%;
-    box-shadow: 0px 0px 30px 1px  rgba(43,202,255,1);
-    margin-left: 460px;
-    margin-top: 160px;
-    animation: homeImage 1.3s; 
+    box-shadow: 0px 0px 50px 8px rgb(141, 224, 252); /* Blue shadow */
+    animation: borderColorAnimated infinite 5s;
 }
 
 .home-text-container{
     width: 50%;
-    margin-left: 00px;
-    margin-top: 220px;
+    margin-left: -370px;
+    margin-top: 240px;
 }
 
 .job-title{
@@ -95,18 +105,28 @@ a{
     font-weight: 500;
     font-size: 33px;
     animation: homeText 1.3s;
+    margin-top: -20px;
+    margin-bottom: 50px;
 }
 
 .language-image-container{
-    width: 1600px;
+    overflow: hidden;
+    width: 500px;
     height: 100px;
+    white-space: nowrap;
+}
+
+.logo-slide{
+    display: inline-block;
+    animation: 8s slide infinite linear;
+    margin-bottom: 40px;
 }
 
 .language-image{
     object-fit: contain;
     width: 100px;
     height: 100px;
-    margin-right: 100px;
+    margin: 0 30px;
     transition: 5s;
 }
 
@@ -118,13 +138,78 @@ a{
     object-fit: cover;
 }
 
-.hide{
-    display: none;
+.home-container button{
+    width: 170px;
+    padding: 18px 0px;
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.my-portfolio-button{
+    background-color: rgba(43,202,255,1);
+    color: white;
+    border-color:  rgba(43,202,255,1);
+    margin: 0 50px;
+}
+
+.about-me-button{
+    color: rgb(255, 117, 244);
+    border-color: rgb(255, 117, 244);
+    background-color: transparent;
+}
+
+.my-portfolio-button:hover{
+    background-color: rgba(43,202,255,1);
+    color: white;
+}
+
+.about-me-button:hover{
+    background-color: rgb(255, 117, 244);
+    color: white;
+}
+
+.about-me-title{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 240px;
+    padding-top: 60px;
+}
+
+.about-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 200px;
+}
+
+.about-card{
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    height: 600px;
+    box-shadow: 0px 0px 20px 2px rgb(192, 192, 192);
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes borderColorAnimated {
+    50%{box-shadow: 0px 0px 50px 2px rgb(255, 117, 244)}
 }
 
 @keyframes homeImage {
     0% {
-        margin-top: 0px;
+        margin-top: 120px;
         opacity: 0;
     }
     100% {
@@ -135,7 +220,7 @@ a{
 
 @keyframes homeText{
     0% {
-        margin-top: 100px;
+        margin-top: 10px;
         opacity: 0;
     }
     100% {
