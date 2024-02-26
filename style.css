@@ -1,0 +1,145 @@
+@font-face {
+    font-family: roboto;
+    src: url(fonts/RobotoSlab-VariableFont_wght.ttf);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+}
+
+ul, li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav-links-container{
+    width: 100%;
+}
+
+.nav-links-container ul{
+    position: relative;
+    top: 30px;
+    margin-right: 80px;
+    display: flex;
+    justify-content: end;
+    gap: 90px;
+}
+
+.nav-links-container ul a{
+    color: black;
+    font-size: 25px;
+    transition: ease-in-out 0.2s;
+}
+
+.link-active{
+    color: rgb(43, 202, 255) !important;
+}
+
+.nav-links-container ul a:hover{
+    color: rgb(155, 221, 243);
+}
+
+.logo{
+    position: absolute;
+    width: 80px;
+    height: 110px;
+    object-fit: cover;
+    z-index: 2;
+    margin-top: -10px;
+    margin-left: 30px;
+}
+
+.nav-links-container h6{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    margin-left: 130px;
+    margin-top: 30px;
+    font-weight: 400;
+}
+
+.home-container{
+    display: flex;
+    justify-content: center;
+}
+
+.home-image-container{
+    width: 50%;
+}
+
+.home-image{
+    object-fit: cover;
+    width: 450px;
+    height: 450px;
+    object-position: 100% 79%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px 1px  rgba(43,202,255,1);
+    margin-left: 460px;
+    margin-top: 160px;
+    animation: homeImage 1.3s; 
+}
+
+.home-text-container{
+    width: 50%;
+    margin-left: 00px;
+    margin-top: 220px;
+}
+
+.job-title{
+    text-align: start;
+    font-weight: 500;
+    font-size: 33px;
+    animation: homeText 1.3s;
+}
+
+.language-image-container{
+    width: 1600px;
+    height: 100px;
+}
+
+.language-image{
+    object-fit: contain;
+    width: 100px;
+    height: 100px;
+    margin-right: 100px;
+    transition: 5s;
+}
+
+.js-image{
+    position: relative;
+    top: 0px;
+    height: 100px !important;
+    width: 100px !important;
+    object-fit: cover;
+}
+
+.hide{
+    display: none;
+}
+
+@keyframes homeImage {
+    0% {
+        margin-top: 0px;
+        opacity: 0;
+    }
+    100% {
+        margin-top: 160px;
+        opacity: 1;
+    }
+}
+
+@keyframes homeText{
+    0% {
+        margin-top: 100px;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
